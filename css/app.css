@@ -1,0 +1,274 @@
+body {
+	background: transparent;
+	
+}
+
+@font-face {  
+   font-family: 'Yapi';  
+   src: url(../fonts/Yapi.ttf)
+ }  
+
+@keyframes loadingScale {
+	0% {
+		transform: scale(1);
+		
+	}
+	100% {
+		transform: scale(.3);
+		
+	}
+}
+
+@keyframes shine {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.2;
+	}
+}
+
+.page {
+	/*height: 24000px;*/
+}
+
+.loading {
+	position: absolute;
+	background: url(../images/background1.jpg) no-repeat center center/100% 100% ;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+.loading-circle_list {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loading-circle {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 12px;
+	display: inline-block;
+	animation-name: loadingScale;
+	animation-duration: 1.2s;
+	animation-timing-function: linear; 
+	animation-iteration-count: infinite;
+}
+.loading-circle-left {
+	animation-delay: 0s;
+	background: url(../images/blueplanet1.png) no-repeat center center ;
+}
+
+.loading-circle-center {
+	animation-delay: .4s;
+	background: url(../images/planet2.png) no-repeat center center ;
+}
+
+.loading-circle-right {
+	animation-delay: .8s;
+	background: url(../images/planet3.png) no-repeat center center ;
+}
+
+.content {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.layer-horizontal {
+	position: absolute;
+	width: 20000px;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+.layer-horizontal .stone {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(../images/stone1.png);
+	background-size: auto 100%;
+	opacity: 0.8;
+	
+}
+
+.layer-horizontal .background {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	background: url(../images/powerball1.png);
+}
+
+.layer-horizontal .space {
+	position: absolute;
+	bottom: -100px;
+	/*left: -100px;*/
+	width: 100%;
+	height: 800px;
+	background: url(../images/../images/background1.jpg);
+	background-size: auto 800px;
+
+}
+
+
+.layer-horizontal .project {
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  width: 500px;
+  height: 300px;
+  
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+.layer-horizontal .project-title {
+  
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
+  color:black;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #1b61d2, 0 0 70px #1b61d2, 0 0 80px #1b61d2, 0 0 100px #1b61d2, 0 0 150px #1b61d2;
+}
+
+
+.layer-horizontal .project-desc {
+  top: 20px;
+  padding-left: 35px;
+  color:white;
+  font-family: 'Yapi'; 
+  /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;*/
+}
+
+.layer-horizontal .project-1 {
+  left: 4500px;
+  background: url(../images/UI5.png);
+  background-size: 100% 100%;
+}
+
+
+.layer-horizontal .project-2 {
+  left: 8500px;
+  background: url(../images/UI3.png);
+  background-size: 100% 100%;
+}
+
+.layer-horizontal .project-3 {
+  left: 9700px;
+  background: url(../images/UI3.png);
+  background-size: 100% 100%;
+}
+
+.layer-horizontal .project-4 {
+  left: 11000px;
+  background: url(../images/UI3.png);
+  background-size: 100% 100%;
+}
+
+
+
+.layer-horizontal .block {
+  position: absolute;
+  bottom: 70px;
+  width: 2000px;
+  height: 180px;
+  background: url(../images/nebula6.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.layer-horizontal .block1 {
+  left: 2000px;
+  opacity: 0.8;
+  
+}
+.layer-horizontal .block2 {
+  left: 6000px;
+  height: 130px;
+  opacity: 0.8;
+  background: url(../images/nebula9.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+
+#people-container {
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	left: 50px;
+	bottom: 86px;
+	overflow: hidden;/*除了300*300区域可视，其他区域隐藏*/
+}
+
+.people {/*整个单方向8帧人物的区域*/
+	position: absolute;
+	width: 2400px;
+	height: 600px;
+	left: 0;
+	top: 0;
+	/*通过改变left与top的值，来获得不同帧状态的人物*/
+	background: url(../images/mech.png) no-repeat;
+}
+
+
+.me {
+	position: absolute;
+  	top: 50%;
+  	left: 800px;
+  	transform: translate(-50%, -50%);
+  	text-align: center;
+  	width: 450px;
+  	z-index: 10;
+}
+
+.me-title {
+  	font-family: 'Yapi';
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+	margin: 20px;
+}
+
+.me-describe {
+	font-family: 'Yapi';
+	font-size: 30px;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	width: 70%;
+	margin: 20px auto;
+	color:white;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #1b61d2, 0 0 70px #1b61d2, 0 0 80px #1b61d2, 0 0 100px #1b61d2, 0 0 150px #1b61d2;
+}
+
+.me-button {
+	width: 150px;
+	height: 80px;
+	border: transparent;
+	color: #333;
+	margin-bottom: 10px;
+	background: url(../images/start5.png);
+	background-size: 100% 100%;
+}
+
+.me-tip {
+	color: #f1f1f1;
+	font-size: 22px;
+	animation: shine 1s infinite;
+	font-family: 'Yapi';
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffe599, 0 0 70px #ffe599, 0 0 80px #ffe599, 0 0 100px #ffe599, 0 0 150px #ffe599;
+}
